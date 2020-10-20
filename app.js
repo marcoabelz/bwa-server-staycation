@@ -11,7 +11,7 @@ const flash = require('connect-flash');
 
 const mongoose = require('mongoose');
 //URL DATABASE
-mongoose.connect('mongodb://127.0.0.1:27017/db_staycation', {
+mongoose.connect('mongodb+srv://staycation:countonme925@cluster0.5a8nd.mongodb.net/db_staycation?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
