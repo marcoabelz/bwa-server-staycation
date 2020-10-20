@@ -1,0 +1,10 @@
+deklarasi async untuk menggunakan await (find, findOne, create)
+req = request
+res = response
+req.body = dikirim/didapat dari form
+req.params = dikirim/didapat melalui url
+populate = digunakan untuk menggabungkan data dari tabel yang berbeda
+
+mocha = runner test / menjalankan test
+chai = library yg memiliki fungsi untuk mengecek testing bener atau tidak 
+chai http = melalukan req ke http ke endpoint (get, post, put)

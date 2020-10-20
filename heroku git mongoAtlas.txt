@@ -1,0 +1,6 @@
+heroku = deploy
+mongodb atlas = server mongo db
+
+--GIT--
+buka terminal -> git init -> git remote add origin 'link git'
+buat file .gitignore di paling luar, supaya node_modules ga dikirim
