@@ -10,6 +10,9 @@ const session = require('express-session');
 const flash = require('connect-flash');
 
 const mongoose = require('mongoose');
+
+const cors = require('cors');
+
 //URL DATABASE
 mongoose.connect('mongodb+srv://staycation:countonme925@cluster0.5a8nd.mongodb.net/db_staycation?retryWrites=true&w=majority', {
   useNewUrlParser: true,
@@ -39,14 +42,18 @@ app.use(session({
 }))
 app.use(flash());
 
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors());
+
 //agar file startbootstrap yg di dalam node_modules dapat digunakan
 app.use('/sb-admin-2', express.static(path.join(__dirname, 'node_modules/startbootstrap-sb-admin-2')));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
